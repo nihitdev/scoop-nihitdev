@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "description": "Windows-first YouTube downloader with a simple graphical interface",
+  "homepage": "https://github.com/nihitdev/youtube-video-dowanloder",
+  "license": "MIT",
+  "url": "https://github.com/nihitdev/youtube-video-dowanloder/releases/download/v1.0.0/YouTube-Downloader.exe",
+  "hash": "66c0a6d43a479f523e04eaf6ff6f5af2e41fe126450cf35fd7654516fea76810",
+  "shortcuts": [
+    [
+      "YouTube-Downloader.exe",
+      "YouTube Downloader"
+    ]
+  ],
+  "checkver": "github",
+  "autoupdate": {
+    "url": "https://github.com/nihitdev/youtube-video-dowanloder/releases/download/v$version/YouTube-Downloader.exe"
+  }
+}

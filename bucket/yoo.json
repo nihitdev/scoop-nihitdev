@@ -1,24 +1,28 @@
 {
-"version": "0.6.1",
-"description": "A tiny developer companion for better coding sessions.",
-"homepage": "https://github.com/nihitdev/yo-cli",
-"license": "GPL-3.0-or-later",
-"architecture": {
-"64bit": {
-"url": "https://github.com/nihitdev/yo-cli/releases/download/v0.6.1/yoo-v0.6.1-windows-x86_64.zip",
-"hash": "3b0b55bcbcffab0b1891a7d24fe95c197ad152debc90714cfb5eeca44070de5c"
-}
-},
-"bin": "yoo.exe",
-"notes": [
-"Run 'yoo --help' to get started."
-],
-"checkver": "github",
-"autoupdate": {
-"architecture": {
-"64bit": {
-"url": "https://github.com/nihitdev/yo-cli/releases/download/v$version/yoo-v$version-windows-x86_64.zip"
-}
-}
-}
+  "version": "0.6.4",
+  "description": "A tiny developer companion for better coding sessions.",
+  "homepage": "https://github.com/nihitdev/yo-cli",
+  "license": "GPL-3.0-or-later",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/nihitdev/yo-cli/releases/download/v0.6.4/yoo-v0.6.4-windows-x86_64.zip",
+      "hash": "7953c4c3b4abdab06d62b840ea126687aef932bfc61f40246f31513abff6d9f1"
+    }
+  },
+  "bin": "yoo.exe",
+  "notes": [
+    "Run 'yoo --help' to get started."
+  ],
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/nihitdev/yo-cli/releases/download/v$version/yoo-v$version-windows-x86_64.zip",
+        "hash": {
+          "url": "https://github.com/nihitdev/yo-cli/releases/download/v$version/SHA256SUMS",
+          "regex": "([a-fA-F0-9]{64})\\s+yoo-v$version-windows-x86_64.zip"
+        }
+      }
+    }
+  }
 }

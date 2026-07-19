@@ -1,0 +1,42 @@
+name: Autoupdate manifests
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: manifest-autoupdate
+  cancel-in-progress: false
+
+jobs:
+  autoupdate:
+    runs-on: windows-latest
+    steps:
+      - name: Check out bucket
+        uses: actions/checkout@v4
+
+      - name: Get Scoop's manifest updater
+        shell: pwsh
+        run: git clone --depth 1 https://github.com/ScoopInstaller/Scoop.git "$env:RUNNER_TEMP\scoop"
+
+      - name: Update all manifests
+        shell: pwsh
+        run: '& "$env:RUNNER_TEMP\scoop\bin\checkver.ps1" "*" "$PWD\bucket" -u'
+
+      - name: Commit updates
+        shell: pwsh
+        run: |
+          if (-not (git status --porcelain -- bucket)) {
+            Write-Host "All manifests are already current."
+            exit 0
+          }
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bucket
+          git commit -m "chore: autoupdate manifests"
+          git push

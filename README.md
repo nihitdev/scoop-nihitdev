@@ -47,6 +47,9 @@ bucket/
 
 Every manifest installs the latest stable release directly from GitHub Releases.
 
+Manifest versions and SHA-256 hashes are checked automatically every six hours.
+You can also run the **Autoupdate manifests** workflow manually from GitHub Actions.
+
 ## Contributing
 
 Found an issue with a manifest?

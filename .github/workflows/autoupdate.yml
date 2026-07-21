@@ -20,7 +20,7 @@ jobs:
       SCOOP_GH_TOKEN: ${{ github.token }}
     steps:
       - name: Check out bucket
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Get Scoop's manifest updater
         shell: pwsh

@@ -15,6 +15,9 @@ concurrency:
 jobs:
   autoupdate:
     runs-on: windows-latest
+    timeout-minutes: 15
+    env:
+      SCOOP_GH_TOKEN: ${{ github.token }}
     steps:
       - name: Check out bucket
         uses: actions/checkout@v4
@@ -25,7 +28,7 @@ jobs:
 
       - name: Update all manifests
         shell: pwsh
-        run: '& "$env:RUNNER_TEMP\scoop\bin\checkver.ps1" "*" "$PWD\bucket" -u'
+        run: '& "$env:RUNNER_TEMP\scoop\bin\checkver.ps1" "*" "$PWD\bucket" -Update -ThrowError'
 
       - name: Commit updates
         shell: pwsh
@@ -39,4 +42,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add bucket
           git commit -m "chore: autoupdate manifests"
+          git pull --rebase origin "${{ github.ref_name }}"
           git push

@@ -1,12 +1,12 @@
 {
-  "version": "0.7.0",
+  "version": "0.9.0",
   "description": "A fast, local-first developer companion for better coding sessions.",
   "homepage": "https://github.com/nihitdev/yo-cli",
   "license": "GPL-3.0-or-later",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/nihitdev/yo-cli/releases/download/v0.7.0/yoo-v0.7.0-windows-x86_64.zip",
-      "hash": "14d7b1f0579cf72e03e11b6aaf740d58cb32de0544d1d6d9494b26c3d78d1e2a"
+      "url": "https://github.com/nihitdev/yo-cli/releases/download/v0.9.0/yoo-v0.9.0-windows-x86_64.zip",
+      "hash": "8715ebed7ea48ba9c2a55a7527742c7b3b33fb813b3621636b5e213c4dfff32c"
     }
   },
   "bin": "yoo.exe",

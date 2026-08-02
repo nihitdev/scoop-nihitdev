@@ -6,7 +6,7 @@
   "architecture": {
     "64bit": {
       "url": "https://github.com/nihitdev/yo-cli/releases/download/v0.7.0/yoo-v0.7.0-windows-x86_64.zip",
-      "hash": "sha:256:14d7b1f0579cf72e03e11b6aaf740d58cb32de0544d1d6d9494b26c3d78d1e2a"
+      "hash": "14d7b1f0579cf72e03e11b6aaf740d58cb32de0544d1d6d9494b26c3d78d1e2a"
     }
   },
   "bin": "yoo.exe",

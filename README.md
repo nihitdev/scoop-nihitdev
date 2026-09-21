@@ -48,7 +48,7 @@ scoop update youtube-downloader
 ```
 Every manifest installs the latest stable release directly from GitHub Releases.
 
-Manifest versions and SHA-256 hashes are checked automatically every six hours.
+Manifest versions and SHA-256 hashes are checked automatically every hour.
 You can also run the **Autoupdate manifests** workflow manually from GitHub Actions.
 
  ## Contributing
